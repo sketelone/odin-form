@@ -26,7 +26,7 @@
             <h5>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br> Sign up <em>now</em> to get started.</h5>
             <h5>You <em>know</em> you want to.</h5>
         </div>
-        <form id="signup_form">
+        <form id="signup_form" action="#" method="get">
             <legend>Let's do this!</legend>
             <fieldset>
                 <div class="group">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="group">
                     <label for="phone_number">PHONE NUMBER</label>
-                    <input type="number" id="phone_number" name="phone_number" required>
+                    <input type="text" id="phone_number" name="phone_number" pattern = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" title="Please enter a valid 9-digit phone number" required>
                 </div>
             </fieldset>
             <fieldset>

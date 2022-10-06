@@ -10,6 +10,7 @@ let password = "";
 
 //create constants for referring to html elements
 const submit = document.querySelector('submit');
+const password = document.querySelector('submit');
 
 //when submit button is clicked, run calculator
 submit.forEach(submit => {
@@ -25,4 +26,5 @@ function displayError(a) {
     if (a == 1) {
         v.textContent = "*Passwords do not match"
     }
+    v.classList.add()
 }
