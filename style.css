@@ -7,7 +7,7 @@ body {
 
 .sidebar {
     background-image:url("img/squares.jpg");
-    width: clamp(500px, 33vh, 100px);
+    width: clamp(500px, 33vw, 1000px);
     min-width: 360px;
     height: 100vh;
 }
@@ -36,6 +36,7 @@ body {
 }
 
 .signup {
+    width: clamp(1000px, 66vw, 2000px);
     font-size: 24px;
     font-weight:bold;
 }
