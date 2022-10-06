@@ -7,24 +7,32 @@ body {
 
 .sidebar {
     background-image:url("img/squares.jpg");
-    width: 33vw;
+    width: clamp(500px, 33vh, 100px);
+    min-width: 360px;
     height: 100vh;
-    position: relative;
 }
 
 .logobar {
     position: relative;
     top:20vh;
-    width: 33vw;
+    height:120px;
     display:flex;
     flex-direction: row;
     justify-content: center;
-    align-self:center;
+    align-items:center;
     background-color: black;
     opacity: 0.8;
     font-family: 'MuseoModerno';
-    font-size: 60px;
+    font-size: 75px;
+    font-weight: bolder;
     color: white;
+}
+
+.photo_credit {
+    position: relative;
+    top:650px;
+    color:white;
+    text-align: center;
 }
 
 .signup {
@@ -58,6 +66,7 @@ fieldset {
 
 label {
     font-size: 10px;
+    letter-spacing: 0.2em;
 }
 
 input {
@@ -69,7 +78,7 @@ input {
 }
 
 img {
-    width: 60px;
+    width: 80px;
 }
 
 a {
@@ -82,8 +91,10 @@ button {
     height:40px;
     padding:10px 40px;
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
     color: white;
+    font-size: 16px;
+    font-weight:bold;
 }
 
 input:focus {
