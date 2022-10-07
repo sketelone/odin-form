@@ -101,3 +101,20 @@ button {
 input:focus {
     border: 3px solid rgba(15, 189, 44, 0.897);
 }
+
+input:invalid {
+    border-color:red;
+    background-color:#ffdddd;
+}
+
+input:invalid:required {
+    border-color:black;
+    background-color:white;
+}
+
+input:valid {
+    border-color:black;
+    background-color:white;
+}
+
+

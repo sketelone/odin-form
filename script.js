@@ -2,29 +2,28 @@
 and */ 
 
 // initialize variables
-let first_name = "";
-let last_name = ""
-let email = "";
-let phone_number = "";
-let password = "";
+
 
 //create constants for referring to html elements
-const submit = document.querySelector('submit');
-const password = document.querySelector('submit');
+const passsword = document.getElementById('password');
+const confirm_password = document.getElementById('confirm-password');
 
-//when submit button is clicked, run calculator
-submit.forEach(submit => {
-    submit.addEventListener('click', validate)
-});
+//when user inputs confirm password, check if it matches
+confirm_password.addEventListener("input", function(event) {
+    if (passwordMatch(password, "input") == false) {
+        confirm_password.setCustomValidity("Passwords do not match!");
+        confirm_password.reportValidity();
+    } else {
+        confirm_password.setCustomValidity("");
+    }
+})
 
 // validate form input
-
-
-//display error
-function displayError(a) {
-    var v = document.createElement('text');
-    if (a == 1) {
-        v.textContent = "*Passwords do not match"
+function passwordMatch(a,b) {
+    console.log("password match", a, b)
+    if (a != b) {
+        return(false);
+    } else {
+        return(true);
     }
-    v.classList.add()
 }
