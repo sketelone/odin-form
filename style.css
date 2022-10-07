@@ -71,6 +71,7 @@ label {
 }
 
 input {
+    outline: none;
     display:block;
     border: 1px solid gray;
     border-radius: 3px;
@@ -107,14 +108,9 @@ input:invalid {
     background-color:#ffdddd;
 }
 
-input:invalid:required {
+/* input:valid {
     border-color:black;
     background-color:white;
-}
-
-input:valid {
-    border-color:black;
-    background-color:white;
-}
+} */
 
 

@@ -31,36 +31,36 @@
             <fieldset>
                 <div class="group">
                     <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="first_name" placeholder="Thor" required>
+                    <input type="text" id="first_name" name="first_name" placeholder="Thor">
                 </div>
                 <div class="group">
                     <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name="last_name" placeholder="Odinson" required>
+                    <input type="text" id="last_name" name="last_name" placeholder="Odinson">
                 </div>
             </fieldset>
             <fieldset>
                 <div class="group">
                     <label for="email">EMAIL</label>
-                    <input type="email" id = "email" name="email" required>
+                    <input type="email" id = "email" name="email">
                 </div>
                 <div class="group">
                     <label for="phone_number">PHONE NUMBER</label>
-                    <input type="text" id="phone_number" name="phone_number" pattern = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" title="Please enter a valid 9-digit phone number" required>
+                    <input type="text" id="phone_number" name="phone_number" pattern = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" title="Please enter a valid 9-digit phone number">
                 </div>
             </fieldset>
             <fieldset>
                 <div class="group">
                     <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password" minlength = "8" title="Password must be at least 8 characters long" required>
+                    <input type="password" id="password" name="password" minlength = "8" title="Password must be at least 8 characters long">
                 </div>
                 <div class="group">
                     <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <input type="password" id="confirm-password" name="confirm-password">
                 </div> 
             </fieldset>
         </form>
         <div class = "footer">
-            <button type="submit" form="signup_form">Create Account</button>
+            <button type="submit" id="submit" form="signup_form">Create Account</button>
             <p>Already have an account? <a>Log in</a></p>
         </div>
     </div>
