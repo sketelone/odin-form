@@ -1,15 +1,14 @@
 /* This code validates input from html form
 and */ 
 
-// initialize variables
-
-
 //create constants for referring to html elements
 const submit = document.getElementById('submit');
+const inputs = document.querySelectorAll("input");
 const password = document.getElementById('password');
-const confirm_password = document.getElementById('confirm-password');
+const confirm_password = document.getElementById('confirm_password');
 
-//when user inputs confirm password, check if it matches
+
+//when user submits form, check if passwords match
 submit.addEventListener("click",function(event) {
     var pass = password.value;
     var conPass = confirm_password.value;
@@ -20,19 +19,32 @@ submit.addEventListener("click",function(event) {
     } else {
         confirm_password.setCustomValidity("");
     }
+    inputs.forEach(input => {
+        validate(input);
+    })
 })
 
-// confirm_password.addEventListener("input", function(event) {
-//     if (passwordMatch(password, "input") == false) {
-//         console.log("input")
-//         confirm_password.setCustomValidity("Passwords do not match!");
-//         confirm_password.reportValidity();
-//     } else {
-//         confirm_password.setCustomValidity("");
-//     }
-// })
+//when user inputs, validate input
 
-// validate form input
+inputs.forEach(input => {
+    input.addEventListener('input', (event) => {
+        validate(input);
+    })
+})
+
+function validate(i) {
+    console.log("validation")
+    if (i.validity.valid) {
+        var inputError = document.querySelector("." + i.name + "_error");
+        console.log(inputError)    
+        inputError.textContent = "";
+    } else {
+        showError(i);
+    }
+}
+
+
+// check if passwords match
 function passwordMatch(a, b) {
     console.log("password match", a, b)
     if (a != b) {
@@ -41,4 +53,11 @@ function passwordMatch(a, b) {
     } else {
         return(true);
     }
+}
+
+function showError(i) {
+    console.log("show an error")
+    var inputError = document.querySelector("." + i.name + "_error");
+    console.log(inputError)
+    inputError.textContent = i.validationMessage;
 }

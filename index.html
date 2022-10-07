@@ -31,31 +31,47 @@
             <fieldset>
                 <div class="group">
                     <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="first_name" placeholder="Thor">
+                    <input type="text" id="first_name" name="first_name" placeholder="Thor" 
+                    autocomplete="off" required>
+                    <span class="first_name_error" aria-live="polite"></span>
                 </div>
                 <div class="group">
                     <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name="last_name" placeholder="Odinson">
+                    <input type="text" id="last_name" name="last_name" placeholder="Odinson" 
+                    autocomplete="off" required>
+                    <span class="last_name_error" aria-live="polite"></span>
                 </div>
             </fieldset>
             <fieldset>
                 <div class="group">
                     <label for="email">EMAIL</label>
-                    <input type="email" id = "email" name="email">
+                    <input type="email" id = "email" name="email" placeholder=" " 
+                    autocomplete="off" required>
+                    <span class="email_error" aria-live="polite"></span>
+
                 </div>
                 <div class="group">
                     <label for="phone_number">PHONE NUMBER</label>
-                    <input type="text" id="phone_number" name="phone_number" pattern = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" title="Please enter a valid 9-digit phone number">
+                    <input type="text" id="phone_number" name="phone_number" 
+                    pattern = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" 
+                    title="Please enter a valid 9-digit phone number" placeholder=" " 
+                    autocomplete="off" required>
+                    <span class="phone_number_error" aria-live="polite"></span>
                 </div>
             </fieldset>
             <fieldset>
                 <div class="group">
                     <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password" minlength = "8" title="Password must be at least 8 characters long">
+                    <input type="password" id="password" name="password" minlength = "8" 
+                    title="Password must be at least 8 characters long" placeholder=" " 
+                    autocomplete="off" required>
+                    <span class="password_error" aria-live="polite"></span>
                 </div>
                 <div class="group">
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password" name="confirm-password">
+                    <label for="confirm_password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm_password" name="confirm_password" 
+                    placeholder=" " autocomplete="off" required>
+                    <span class="confirm_password_error" aria-live="polite"></span>
                 </div> 
             </fieldset>
         </form>

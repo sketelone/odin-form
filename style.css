@@ -100,17 +100,18 @@ button {
 }
 
 input:focus {
-    border: 3px solid rgba(15, 189, 44, 0.897);
+    border: 3px solid rgb(0, 167, 144);
 }
 
-input:invalid {
-    border-color:red;
-    background-color:#ffdddd;
+input:not(:focus):not(:placeholder-shown):invalid {
+    background: rgb(252, 217, 223);
+    border-color: red;
 }
 
-/* input:valid {
-    border-color:black;
-    background-color:white;
-} */
-
-
+span {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color:red;
+    border: none;
+    text-transform: uppercase;
+}
