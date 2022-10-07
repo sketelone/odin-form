@@ -88,6 +88,10 @@ a {
     color:  #6f9e7b;
 }
 
+p {
+    font-size:16px;
+}
+
 button {
     background-color: #6f9e7b;
     height:40px;
@@ -101,6 +105,7 @@ button {
 
 input:focus {
     border: 3px solid rgb(0, 167, 144);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
 
 input:not(:focus):not(:placeholder-shown):invalid {
@@ -109,9 +114,13 @@ input:not(:focus):not(:placeholder-shown):invalid {
 }
 
 span {
+    display:block;
+    padding: 10px 0px;
+    width:225px;
     font-size: 10px;
     letter-spacing: 0.2em;
     color:red;
     border: none;
     text-transform: uppercase;
+    overflow-wrap: break-word;
 }

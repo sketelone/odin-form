@@ -3,6 +3,7 @@ and */
 
 //create constants for referring to html elements
 const submit = document.getElementById('submit');
+const phone = document.getElementById('phone_number');
 const inputs = document.querySelectorAll("input");
 const password = document.getElementById('password');
 const confirm_password = document.getElementById('confirm_password');
@@ -24,14 +25,26 @@ submit.addEventListener("click",function(event) {
     })
 })
 
-//when user inputs, validate input
+//when user input phone number, validate input
+phone.addEventListener('input', (event) => {
+    phone.setCustomValidity("");
+    if (phone.validity.valueMissing) {
+        phone.setCustomValidity("Please fill out this field.");
+    } else if (phone.validity.patternMismatch) {
+        phone.setCustomValidity("Please enter a valid 9-digit phone number.");
+    } else {
+        phone.setCustomValidity("");
+    }
+})
 
+//when user inputs anything, validate input
 inputs.forEach(input => {
     input.addEventListener('input', (event) => {
         validate(input);
     })
 })
 
+//show error if input is invalid 
 function validate(i) {
     console.log("validation")
     if (i.validity.valid) {
@@ -42,7 +55,6 @@ function validate(i) {
         showError(i);
     }
 }
-
 
 // check if passwords match
 function passwordMatch(a, b) {
@@ -55,6 +67,7 @@ function passwordMatch(a, b) {
     }
 }
 
+//show validation message as error
 function showError(i) {
     console.log("show an error")
     var inputError = document.querySelector("." + i.name + "_error");
